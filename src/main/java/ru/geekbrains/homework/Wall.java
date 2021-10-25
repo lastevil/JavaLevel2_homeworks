@@ -11,4 +11,5 @@ public class Wall implements Complexity{
     public void complex(int a) {
             height=a;
     }
+
 }

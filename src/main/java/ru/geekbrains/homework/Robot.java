@@ -5,7 +5,6 @@ public class Robot implements Action{
     public void run(Road r) {
         System.out.println("Робот побежал по дороге");
     }
-
     @Override
     public void jump(Wall w) {
         System.out.println("Робот прыгнул через стену");

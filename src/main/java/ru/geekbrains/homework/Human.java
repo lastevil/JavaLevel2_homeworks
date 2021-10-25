@@ -10,7 +10,6 @@ public class Human implements Action{
     public void jump(Wall w) {
         System.out.println("Человек прыгнул через стену");
     }
-
     @Override
     public String info() {
         return "Человек";

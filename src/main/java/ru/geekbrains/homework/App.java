@@ -10,7 +10,7 @@ public class App {
         Road road = new Road();
         Wall wall = new Wall();
         Complexity[] obstacles = {road,wall,wall,road,road,wall,road};
-
+//пробежка всех по полосе препятствий
         for (Action m: members
              ) {
             for (Complexity obs: obstacles

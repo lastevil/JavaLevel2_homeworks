@@ -6,7 +6,6 @@ public class Road implements Complexity{
     public void Road(){
         length = 1;
     }
-
     @Override
     public void complex(int c) {
         length = c;
