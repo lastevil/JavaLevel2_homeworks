@@ -21,7 +21,7 @@ public class App {
                 else
                     m.jump(wall);
             }
-            System.out.println(m.info()+" закончил полосу");;
+            System.out.println(m.info()+" закончил полосу");
         }
     }
 }
