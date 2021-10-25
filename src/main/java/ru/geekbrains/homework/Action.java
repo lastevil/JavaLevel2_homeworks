@@ -4,4 +4,6 @@ public interface Action {
     void jump(Wall w);
     void run(Road r);
     String info();
+    int getJumps();
+    int getSteps();
 }
