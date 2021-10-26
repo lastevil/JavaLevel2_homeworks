@@ -24,7 +24,7 @@ public class App {
             for (Complexity obs: obstacles
                  ) {
                 if (obs.equals(road)){
-                    if (m.getSteps()==0){
+                    if (m.getSteps()<=0){
                         System.out.println(m.info()+" не может продолжать");
                         break;
                     }
@@ -32,7 +32,7 @@ public class App {
                 }
                 else
                 {
-                    if (m.getJumps()==0){
+                    if (m.getJumps()<=0){
                         System.out.println(m.info()+" не может продолжать");
                         break;
                     }
