@@ -7,17 +7,21 @@ public class Robot implements Action{
     @Override
     public void jump(Wall w) {
         this.jumps = this.steps - w.getHeight();
-        System.out.println("Робот прыгнул через стену");
+        System.out.println(this+" прыгнул через стену");
     }
 
     @Override
     public void run(Road r) {
         this.steps = this.steps - r.getLength();
-        System.out.println("Робот побежал по дороге");
+        System.out.println(this+" побежал по дороге");
     }
     @Override
     public String info() {
-        return "Робот";
+        return this.toString();
+    }
+    @Override
+    public String toString() {
+        return "Робот#"+ this.hashCode();
     }
 
     public int getJumps() {
