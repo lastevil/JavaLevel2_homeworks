@@ -6,13 +6,16 @@ public class App {
         Cat cat = new Cat();
         cat.setJumps(3);
         cat.setSteps(2);
+        Cat cat2 = new Cat();
+        cat.setJumps(4);
+        cat.setSteps(1);
         Human human = new Human();
         human.setSteps(4);
         human.setJumps(3);
         Robot robot = new Robot();
         robot.setJumps(2);
         robot.setSteps(6);
-        Action[] members ={cat,human,robot};
+        Action[] members ={cat,cat2,human,robot};
         Road road = new Road();
         road.complex(1);
         Wall wall = new Wall();
