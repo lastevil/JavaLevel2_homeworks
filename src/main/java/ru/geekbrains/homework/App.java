@@ -17,6 +17,7 @@ public class App {
         road.complex(1);
         Wall wall = new Wall();
         wall.complex(1);
+        //массив препятствий
         Complexity[] obstacles = {road,wall,wall,road,road,wall,road};
 //пробежка всех по полосе препятствий
         for (Action m: members
