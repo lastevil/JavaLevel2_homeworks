@@ -1,21 +1,25 @@
 package homework3;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
-public class PhoneBook {
 
-    private HashMap<String,String> a = new HashMap<>();
+public class PhoneBook {
+    private HashMap <String, HashSet> a = new HashMap<>();
 
     public void add(String lastname, String phone){
-        (this.a).put(phone,lastname);
+        HashSet phoneSet = new HashSet();
+        if (this.a.get(lastname)==null){
+            this.a.put(lastname,phoneSet);
+            phoneSet.add(phone);
+        }
+        else {
+            this.a.get(lastname).add(phone);
+        }
     }
     public void get(String lastname){
-        for (Map.Entry<String, String> o : this.a.entrySet()) {
-            if (lastname.equals(o.getValue())){
-            System.out.println(o.getKey() + ": " + o.getValue());
-            }
-        }
+        System.out.println(lastname+" : "+this.a.get(lastname));
     }
 
 }
