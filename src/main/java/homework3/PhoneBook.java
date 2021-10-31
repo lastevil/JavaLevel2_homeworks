@@ -9,8 +9,8 @@ public class PhoneBook {
     private HashMap <String, HashSet> a = new HashMap<>();
 
     public void add(String lastname, String phone){
-        HashSet phoneSet = new HashSet();
         if (this.a.get(lastname)==null){
+            HashSet phoneSet = new HashSet();
             this.a.put(lastname,phoneSet);
             phoneSet.add(phone);
         }
