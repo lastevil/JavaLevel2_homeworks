@@ -1,18 +1,44 @@
 package ru.geekbrains.homework;
 
 public class Human implements Action{
-    @Override
-    public void run(Road r) {
-        System.out.println("Человек побежал по дороге");
-    }
+    private int jumps=0;
+    private int steps=0;
+
 
     @Override
     public void jump(Wall w) {
-        System.out.println("Человек прыгнул через стену");
+        this.jumps -=w.getHeight();
+        System.out.println(this+" прыгнул через стену");
     }
 
     @Override
+    public void run(Road r) {
+        this.steps -=r.getLength();
+        System.out.println(this+" побежал по дороге");
+    }
+    @Override
     public String info() {
-        return "Человек";
+        return this.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Человек#"+ this.hashCode();
+    }
+
+    public int getJumps() {
+        return jumps;
+    }
+
+    public int getSteps() {
+        return steps;
+    }
+
+    public void setJumps(int jumps) {
+        this.jumps = jumps;
+    }
+
+    public void setSteps(int steps) {
+        this.steps = steps;
     }
 }
